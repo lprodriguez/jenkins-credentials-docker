@@ -10,7 +10,7 @@ pipeline {
       steps {
         withCredentials([usernamePassword(credentialsId: 'jenkins-dockerhub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
           sh "docker login -u ${env.dockerUser} -p ${env.dockerPassword}"
-          sh 'docker push apasoft/jenkins-web:latest'
+          sh 'docker push lprodriguezg/jenkins-web:latest'
         }
       }
     }
